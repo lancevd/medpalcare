@@ -24,7 +24,31 @@
                 <div class="menu-item"><a href="#">Services</a></div>
                 <a href="#"><button class="but" id="nav-btn">Register</button></a>
             </div>
+
+            <div id="menu-icon">
+                <img src="./assets/hamburger-menu-svgrepo-com.svg" alt="">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
         </nav>
+
+        <!-- <div id="mobile-nav" class="container">
+            <div id="brand">
+                <a href="index.html"><h3>Medpal</h3></a>
+            </div>
+
+
+            <div class="mobile-menu">
+                <div class="menu-item"><a href="#">Home</a></div>
+                <div class="menu-item"><a href="#">About</a></div>
+                <div class="menu-item"><a href="#">How It Works</a></div>
+                <div class="menu-item"><a href="#">Services</a></div>
+                <a href="#"><button class="but" id="nav-btn">Register</button></a>
+            </div>
+
+            <div id="menu-icon">
+                <img src="./assets/hamburger-menu-svgrepo-com.svg" alt="">
+            </div>
+        </div> -->
     </header>
 
     <section id="hero" class="container">
@@ -287,6 +311,24 @@
             </div>
         </div>
     </footer>
-    
+
+    <script>
+        const openMenuIcon = document.getElementById('menu-icon');
+        const closeMenuIcon = document.querySelector('.fa-xmark')
+        const navBar = document.querySelector('nav');
+        const navMenu = document.querySelector('.nav-menu');
+        const header = document.querySelector('header');
+        const menuLinks = document.querySelectorAll('menu-item');
+
+        function openMenu () {
+            // header.style = `height:100vh;`
+            navMenu.style = "display:flex"
+            openMenuIcon.style = 'display:none'
+            closeMenuIcon.style = 'display:block'
+        }
+
+
+        openMenu();
+    </script>
 </body>
 </html>

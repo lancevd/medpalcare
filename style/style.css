@@ -21,7 +21,6 @@ body {
 
 /* Global Settings */
 
-
 :root {
   --bg: #e4e9ed;
   --light: #f3f3f6;
@@ -140,6 +139,10 @@ nav {
   color: #fff;
 }
 
+#menu-icon {
+  display: none;
+}
+
 #brand h3 {
   color: var(--light);
   font-style: italic;
@@ -181,7 +184,6 @@ nav {
   margin: auto;
 }
 
-
 .hero-left {
   color: #fff;
 }
@@ -217,7 +219,7 @@ nav {
   justify-content: flex-end;
   align-items: flex-end;
   padding: 20px;
-  background: url('../assets/blob.svg') ;
+  background: url("../assets/blob.svg");
   background-size: cover;
 }
 
@@ -265,7 +267,6 @@ nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  
 }
 
 .service-icon img {
@@ -353,8 +354,6 @@ nav {
   color: var(--white);
 }
 
-
-
 /* ------FEATURES------ */
 
 #features {
@@ -386,7 +385,6 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  
 }
 
 .feature-box {
@@ -443,9 +441,8 @@ nav {
   height: 60px;
 }
 
-
 .get-app {
-  height: 200px;
+  /* height: 200px; */
   overflow-y: visible;
 }
 
@@ -464,7 +461,7 @@ nav {
   display: flex;
   width: 33%;
   align-items: baseline;
-  
+  text-align: center;
 }
 
 #get-app-content .mid img {
@@ -481,6 +478,7 @@ nav {
   width: 33%;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 /* ------FOOTER------ */
@@ -579,7 +577,7 @@ footer form button {
 MEDIA RESPONSIVENESS
 ============================================================== */
 
-@media screen and (min-width: 760px) and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   html {
     font-size: 87.5%;
   } /*14px*/
@@ -618,6 +616,60 @@ MEDIA RESPONSIVENESS
     font-size: 0.833rem;
   }
 
+  /* ------Mobile Menu ------ */
+
+  nav {
+    align-items: flex-start;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  #menu-icon .fa-xmark {
+    font-size: 48px;
+    display: none;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    margin: 50px;
+  }
+
+  /* header {
+    height: 100vh;
+  } */
+
+  /* #mobile-nav {
+    display: flex;
+    justify-content: space-between;
+  } */
+
+  /* #mobile-nav {
+    position: absolute;
+    background: var(--dark);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 20px;
+  } */
+
+  /*   
+  #mobile-nav #brand {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  #menu-icon img {
+    width: 40px;
+  }
+
   .hero-left {
     padding: 5px;
   }
@@ -631,7 +683,7 @@ MEDIA RESPONSIVENESS
   }
 
   .service-boxes {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .service-box {
@@ -642,14 +694,14 @@ MEDIA RESPONSIVENESS
     flex-direction: column;
   }
 
-  #features-right, #features-left {
+  #features-right,
+  #features-left {
     width: 100%;
   }
 
   #features-left img {
     width: 100%;
   }
-
 
   .footer-top .but {
     width: 120px;
@@ -659,7 +711,6 @@ MEDIA RESPONSIVENESS
     width: 55%;
   }
 
-  
   .steps {
     flex-direction: column;
   }
@@ -710,7 +761,7 @@ MEDIA RESPONSIVENESS
   }
 
   .service-boxes {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .service-box {
@@ -737,7 +788,6 @@ MEDIA RESPONSIVENESS
     align-items: flex-start;
   }
 
-  
   .cta-one .left {
     padding: 0% !important;
     text-align: center;
@@ -747,7 +797,8 @@ MEDIA RESPONSIVENESS
     flex-direction: column;
   }
 
-  #features-right, #features-left {
+  #features-right,
+  #features-left {
     width: 100%;
   }
 
@@ -767,8 +818,17 @@ MEDIA RESPONSIVENESS
     width: 95%;
   }
 
-  #get-app-content {
-    flex-direction: column;
+  .get-app {
+    height: fit-content;
+  }
+
+  #get-app-content .left,
+  #get-app-content .right {
+    width: 50%;
+  }
+
+  .app-logos img {
+    width: 150px !important;
   }
 
   #get-app-content .mid {
