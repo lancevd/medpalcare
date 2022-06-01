@@ -141,7 +141,9 @@ nav {
 
 #menu-icon {
   display: none;
+  cursor: pointer;
 }
+
 
 #brand h3 {
   color: var(--light);
@@ -628,8 +630,13 @@ MEDIA RESPONSIVENESS
 
   #menu-icon .fa-xmark {
     font-size: 48px;
+  }
+
+  #close-icon {
     display: none;
   }
+
+  
 
   .nav-menu {
     display: none;

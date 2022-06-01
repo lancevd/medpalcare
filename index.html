@@ -26,8 +26,8 @@
             </div>
 
             <div id="menu-icon">
-                <img src="./assets/hamburger-menu-svgrepo-com.svg" alt="">
-                <i class="fa-solid fa-xmark"></i>
+                <img id="open-icon" src="./assets/hamburger-menu-svgrepo-com.svg" alt="">
+                <div id="close-icon"><i class="fa-solid fa-xmark"></i></div> 
             </div>
         </nav>
 
@@ -313,8 +313,9 @@
     </footer>
 
     <script>
-        const openMenuIcon = document.getElementById('menu-icon');
-        const closeMenuIcon = document.querySelector('.fa-xmark')
+        const openMenuIcon = document.getElementById('open-icon');
+        const closeMenuIcon = document.querySelector('#close-icon')
+
         const navBar = document.querySelector('nav');
         const navMenu = document.querySelector('.nav-menu');
         const header = document.querySelector('header');
@@ -324,11 +325,25 @@
             // header.style = `height:100vh;`
             navMenu.style = "display:flex"
             openMenuIcon.style = 'display:none'
-            closeMenuIcon.style = 'display:block'
+            closeMenuIcon.style = 'display:block !important;'
+
+            for (let i = 0; i< menuLinks.length; i++) {
+                menuLinks[i].addEventListener('click', closeMenu)
+            }
         }
 
+        function closeMenu () {
+            // header.style = `height:100vh;`
+            navMenu.style = "display:none"
+            openMenuIcon.style = 'display:block'
+            closeMenuIcon.style = 'display:none !important;'
+        }
 
-        openMenu();
+        openMenuIcon.addEventListener('click', openMenu)
+        closeMenuIcon.addEventListener('click', closeMenu)
+
+        // closeMenu();
+        // openMenu();
     </script>
 </body>
 </html>
